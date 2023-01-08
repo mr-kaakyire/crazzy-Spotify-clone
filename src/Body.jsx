@@ -5,7 +5,6 @@ import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import SongRow from './SongRow';
-import SpotifyPlayer from 'react-spotify-player';
 import axios from 'axios';
 
 
@@ -20,6 +19,7 @@ function Body({spotify}) {
       type:"SET_COLOR",
       color:random_color
     })
+   
   },[])
   
 

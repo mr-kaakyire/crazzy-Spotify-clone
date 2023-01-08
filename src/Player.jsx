@@ -4,11 +4,13 @@ import Footer from './Footer'
 import Playlist from './Playlist'
 import Sidebar from "./Sidebar"
 import { useStateValue } from './StateProvider'
+import { loginUrl } from './spotify'
 
 
 
 function Player({spotify}) {
   const [{playlist_id},dispatch]=useStateValue();
+ 
   
   return (
     <div className=''>
