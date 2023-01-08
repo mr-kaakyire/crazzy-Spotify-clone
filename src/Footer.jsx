@@ -123,8 +123,8 @@ function Footer({spotify}) {
       <div className='flex-[0.3] flex items-center max-w-[300px]'>
         <img className='object-contain mr-5 h-12 w-12 rounded-sm' src={item?(item?.album.images[0].url):(played?.album.images[0].url)} alt="" />
         <div>
-          <h4 className='font-bold text-sm'>{item?(item.name):(played?.name)}</h4>
-          <p className='text-xs text-gray-400'>{item?(item.artists.map((artist)=>(artist.name)).join(", ")):(played?.artists.map((artist)=>(artist.name)).join(", "))}</p>
+          <h4 className='font-bold text-xs sm:text-sm'>{item?(item.name):(played?.name)}</h4>
+          <p className='sm:inline hidden text-xs text-gray-400'>{item?(item.artists.map((artist)=>(artist.name)).join(", ")):(played?.artists.map((artist)=>(artist.name)).join(", "))}</p>
         </div>
       </div>
       {/* Footer center */}
@@ -142,21 +142,21 @@ function Footer({spotify}) {
         <SkipNextRoundedIcon onClick={skipNext} className='hover:text-white text-gray-400' fontSize='large'/>
         <RepeatIcon className='active:text-white text-green-500'/>
         </div>
-       <article className='progress-bar mt-5  '/>
+       <article className='progress-bar max-w-[150px] ml-10 sm:ml-0 sm:max-w-[300.8px] mt-5'/>
       </div>
       {/* Footer right */}
       <div className='flex-[0.2] flex  justify-between items-center text-white'>
         <Grid container spacing={1}>
-          <Grid item>
+          <Grid item className='hidden sm:inline'>
               <PlaylistPlayIcon/>
           </Grid>
-          <Grid  item>
-            <VolumeDownIcon/>
+          <Grid  item className='hidden sm:inline'> 
+            <VolumeDownIcon  />
           </Grid>
           <Grid  item xs>
             <Slider  value={volume} name="volume" onChange={handleVolume}  size='small' />
           </Grid>
-          <Grid item>
+          <Grid item className='hidden sm:inline'>
             <VolumeUpIcon/>
           </Grid>
         </Grid>

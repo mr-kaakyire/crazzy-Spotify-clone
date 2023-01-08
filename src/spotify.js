@@ -1,6 +1,6 @@
 export const authEndpoint="https://accounts.spotify.com/authorize";
 
-const redirectUri="https://crazzy-spotify-clone.vercel.app/";
+const redirectUri="http://localhost:3000/";
 
 const clientId="cf9d81bb16ce42eeaeb95c065f1ce23e";
 
@@ -18,7 +18,7 @@ export const getTokenFromUrl=()=>{
     
     
     return window.location.hash.substring(1).split("&").reduce((initial,item)=>{
-        let parts=item.split("=");
+        var parts=item.split("=");
         initial[parts[0]]=decodeURIComponent(parts[1])
 
         return initial

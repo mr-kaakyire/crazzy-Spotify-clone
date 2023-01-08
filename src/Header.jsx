@@ -53,13 +53,13 @@ function Header({spotify}) {
     <div className='flex items-center justify-between mb-8'>
         {/* Header leftt */}
         <div>
-          <p className='font-semibold text-[28px] ml-5'>{greeting}</p>
+          <p className='font-semibold text-[20px] sm:text-[28px] ml-32 sm:ml-5'>{greeting}</p>
         </div>
         {/* Header Right */}
       
           <div onClick={()=>setDropDown(!dropDown)} className='flex items-center h-fit space-x-2 bg-black rounded-3xl pr-2 mr-2 cursor-pointer hover:bg-[#000000]/60'>
             <Avatar src={user?.images[0]?.url} alt={user?.display_name} />
-            <h4>{truncate(`${user?.display_name}`,10)}</h4>
+            <h4 className='hidden sm:inline'>{truncate(`${user?.display_name}`,10)}</h4>
             {dropDown?(<ArrowDropUp/>):(<ArrowDropDownIcon/>)}
           </div>
           {dropDown?(

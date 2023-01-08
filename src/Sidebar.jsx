@@ -6,11 +6,13 @@ import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import {useStateValue} from "./StateProvider";
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
-
+import MenuIcon from '@mui/icons-material/Menu';
 
 function Sidebar() {
   const [{playlists,playlist_id},dispatch]=useStateValue();
-  console.log(playlists)
+  
+  
+  
  
 
   
@@ -34,10 +36,11 @@ function Sidebar() {
 
  
   return (
-    <div className='flex-[0.1] overflow-scroll scrollbar-hide  h-screen min-w-[230px] px-3 py-5 bg-black text-white '>
+    <div className='overflow-scroll scrollbar-hide  h-screen min-w-[230px] px-3 py-5 bg-black text-white '>
+      
       <img className='h-10 mx-auto ' src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="" />
       
-      <div className=' flex-col space-y-8 mt-5 ml-2'>
+      <div className='flex-col space-y-8 mt-5 ml-2'>
         <div>
         <div onClick={()=>returnHome()}>
           <SidebarOption    title="Home" Icon={HomeOutlinedIcon}/>

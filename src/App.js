@@ -17,8 +17,8 @@ function App() {
     useEffect(()=>{
         
         const hash=getTokenFromUrl()
-        window.location.hash=""
         const _token=hash.access_token;
+        
         
         if(_token){
           dispatch({
@@ -28,7 +28,9 @@ function App() {
           
           
 
+          
           spotify.setAccessToken(_token);
+          
 
          
           spotify.getMe().then(user=>{

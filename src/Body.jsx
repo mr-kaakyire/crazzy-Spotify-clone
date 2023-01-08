@@ -14,7 +14,8 @@ function Body({spotify}) {
   
   useEffect(()=>{
     const color_array=["#222937","#9fb7ce","#af3b2c","#3a5961","#ba6e4a","#4f399b","#046551","#c5ae61","#b8b8b8","#b5b5b5","#ed7197","#cb8925","#5b5773"];
-    const random_color=color_array[Math.floor(Math.random()*14)];
+    const random_color=color_array[Math.floor(Math.random()*14)-1];
+    
     dispatch({
       type:"SET_COLOR",
       color:random_color
@@ -61,13 +62,13 @@ function Body({spotify}) {
     })
   }
   return (
-    <div style={{background:`linear-gradient(to bottom,${color} ,#000000)`}} className='flex-[0.9] overflow-y-scroll overflow-x-hidden scrollbar-hide text-white h-screen  py-3'>
+    <div style={{background:`linear-gradient(to bottom,${color} ,#000000)`}} className='flex-[1] sm:flex-[0.9] overflow-y-scroll overflow-x-hidden scrollbar-hide text-white h-screen  py-3'>
       <Header spotify={spotify}/>
-      <div className='flex items-end  '>
-        <img className='object-contain min-h-[192px]  max-h-[255px] shadow-3xl mx-5' src={discover_weekly?.images[0]?.url} alt="" />
-        <div className='flex-[1]'>
+      <div className='sm:flex sm:items-end ml-10 space-y-5 sm:space-y-0 sm:ml-0'>
+        <img className='object-contain min-h-[100px] max-h-[200px]  sm:min-h-[80px] sm:max-h-[200px] md:min-h-[192px]  md:max-h-[255px] shadow-3xl sm:mx-5' src={discover_weekly?.images[0]?.url} alt="" />
+        <div className='flex-[1]  '>
           <strong>PLAYLIST</strong>
-          <h2 className=' text-[80px] font-bold mb-3'>{discover_weekly?.name}</h2>
+          <h2 className=' text-[5vw] sm:text-[60px] md:text-[80px] font-bold mb-3'>{discover_weekly?.name}</h2>
           <p className='text-[15px] font-[600] text-[#b8bcc1]'>{discover_weekly?.description}</p>
         </div>
       </div>
