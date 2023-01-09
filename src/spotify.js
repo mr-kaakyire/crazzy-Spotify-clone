@@ -1,6 +1,6 @@
 export const authEndpoint="https://accounts.spotify.com/authorize";
 
-const redirectUri="http://localhost:3000/";
+const redirectUri="https://crazzy-spotify-clone.vercel.app/git";
 
 const clientId="cf9d81bb16ce42eeaeb95c065f1ce23e";
 
