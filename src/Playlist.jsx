@@ -66,7 +66,7 @@ function Playlist({spotify}) {
     })
   },[playlist_id])
   return (
-    <div style={{background:`linear-gradient(to bottom,${color} ,#000000)`}} className="flex-[0.9] overflow-scroll scrollbar-hide text-white h-screen  py-3 ">
+    <div style={{background:`linear-gradient(to bottom,${color} ,#000000)`}} className="flex-[1] sm:flex-[0.9] overflow-scroll scrollbar-hide text-white h-screen  py-3 ">
     <Header/>
     <div className='flex items-end  '>
       <img className='object-contain min-h-[192px]  max-h-[255px] shadow-3xl mx-5' src={playlist?.images[0].url} alt="" />
